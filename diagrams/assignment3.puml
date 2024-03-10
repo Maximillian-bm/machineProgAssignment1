@@ -1,0 +1,33 @@
+@startuml
+start
+: Save R1, R2, R3, R4 and R5 in memmory;
+: Set R1 equal to R0;
+: Set R5 equal to 0;
+repeat
+    : Add 1 to R5;
+    : Suptract 2 from R1;
+repeat while (R2 >= 0) is (yes)
+->no;
+: Set R1 equal to R5;
+repeat
+    : Suptract 1 from R1;
+    : Set R3 equal to the value of R1 minus one;
+    if(R3 == 0) then (yes)
+        : Set R0 to 1;
+        : Restore the originals values of R1, R2, R3, R4 and R5 from memmory;
+        stop
+    else (no)
+    endif
+    : Set R2 equal R0;
+    : Set R4 equal to the negative value of R1;
+    : Add R4 to R2;
+    repeat
+        : Add R4 to R2;
+    repeat while (R2 > 0) is (yes)
+    ->no;
+repeat while (R2 < 0) is (yes)
+->no;
+: Set R0 to 0;
+: Restore the originals values of R1, R2, R3, R4 and R5 from memmory;
+stop
+@enduml
