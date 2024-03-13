@@ -1,0 +1,19 @@
+@startuml
+start
+:Sets the program in location x3000;
+:resets R0 to 0;
+:preSets R0 to 1;
+if (R0 == 0) then (yes)
+  :Uses label outputNOT "The number is prime";
+  :Prints the label in console;
+  :Ends the program;
+stop
+else (no)
+If (R0 == n or R0 == p)
+  :Uses label outputNOT "The number is not prime";
+  :Prints the label in console;
+  :Ends the program;
+stop
+else 
+stop
+@enduml
