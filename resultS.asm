@@ -17,5 +17,5 @@ resultNP LEA R0, outputNot                  ;sets the out output
         PUTS                                ;prints it in console 
         JSR     EOP                         ;this stops the program after the outprint
         
-EOP 
+EOP
 .end                                    ;this labels .end with EOP(endOfProgram)
