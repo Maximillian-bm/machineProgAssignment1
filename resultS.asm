@@ -2,13 +2,13 @@
 resultS AND R0,R0, #0                       ;sets R0 to 0
         
 result  ADD R0,R0, #1                       ;sets R0 to the given nr
-        BRz resultZ
-        BRnp resultNP 
+        BRnp resultP
+        BRz resultNP 
         JSR     EOP                         ;this stops the program after the outprint
 
 
 outputIs  .stringz "The number is prime"    ;this is the output string that resultZ is holding
-resultZ LEA R0, outputIs                    ;sets the output
+resultP LEA R0, outputIs                    ;sets the output
         PUTS                                ;prints its in console
         JSR     EOP                         ;this stops the program after the outprint
 
