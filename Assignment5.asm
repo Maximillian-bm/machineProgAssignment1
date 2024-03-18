@@ -82,8 +82,8 @@ save8   .BLKW 1
 ; ***** Print to console whether or not the number was prime. *****
 resultS     AND R1, R1, #0
             ADD R1, R0, #0
-            BRp     resultP
-            BR      resultNP
+            BRz     resultNP
+            BR      resultP
             RET
 
 outputIs    .stringz "\nThe number is prime."       ; this is the output string that resultZ is holding

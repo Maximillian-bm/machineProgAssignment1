@@ -2,8 +2,8 @@
 resultS AND R0,R0, #0                       ;sets R0 to 0
         
 result  ADD R0,R0, #1                       ;sets R0 to the given nr
-        BRnp resultP
         BRz resultNP 
+        BR resultP
         JSR     EOP                         ;this stops the program after the outprint
 
 
