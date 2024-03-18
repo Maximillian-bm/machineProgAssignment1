@@ -1,0 +1,27 @@
+@startuml
+start
+repeat
+    partition readS {
+        : Print  “Input a 2 digit decimal number:”;
+        : Read a two digit decimal number from the console;
+        : Store number in R0;
+    }
+    partition isPrime {
+        : Check if the number in R0 is prime;
+        if (Number is prime?) then (yes)
+        : R0 = 1;
+        else (no)
+        : R0 = 0;
+        endif
+    }
+    partition resultS {
+            if (R0 is positive?) then (yes)
+            : Print: "The number __**is**__ prime.";
+            else (no)
+            : Print: "The number __**is not**__ prime.";
+            endif
+    }
+repeat while() is (Repeat)
+->Exit program;
+stop
+@enduml
